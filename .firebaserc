@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "imobiliaria-42489": {
+      "hosting": {
+        "api-project": [
+          "imobiliaria-42489"
+        ]
+      }
+    }
+  }
+}

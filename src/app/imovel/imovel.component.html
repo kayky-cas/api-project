@@ -1,0 +1,20 @@
+<app-header></app-header>
+<app-nav></app-nav>
+
+<div class="container" *ngIf="imovel$ | async as imovel;" >
+  <div class="content">
+    <img [src]="imovel.img" alt="{{imovel.nome}}">
+
+    <div class="dText">
+      <h1>{{imovel.nome}}</h1>
+      <span>{{imovel.endereco}}</span>
+      <div class="dContato">
+        <h3 class="text-success">R$ {{imovel.valor}}</h3>
+        <a target="_blanck" href="https://api.whatsapp.com/send?phone=5554999999999&text=Olá estou interessado(a) no imóvel {{imovel.nome}}, poderei marcar uma vizita?{{'http://localhost:4200/imoveis/'+imovel.id}}" class="btn btn-success">Entre em contato<img src="https://img.icons8.com/cotton/64/000000/whatsapp--v4.png"/></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>
